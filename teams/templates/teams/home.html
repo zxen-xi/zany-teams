@@ -1,0 +1,17 @@
+{% extends "teams/layout.html" %}
+{% block content %}
+<br>
+<br>
+<center>
+  <div class="jumbotron jumbotron-c-resize">
+    <h1>Microsoft Teams</h1>
+    <br>
+    {% if user.is_authenticated %}
+      <h4>Welcome back, {{ user.name }}!</h4>
+      <p>Use the navigation bar at the top of the page to get started.</p>
+    {% else %}
+      <a href="{% url 'signin' %}" class="btn btn-primary btn-large">Click here to sign in</a>
+    {% endif %}
+  </div>
+</center>
+{% endblock %}

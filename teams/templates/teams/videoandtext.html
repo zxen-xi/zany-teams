@@ -1,0 +1,16 @@
+{% extends "teams/layout.html" %}
+{% block content %}
+<br>
+<br>
+<center>
+  <div class="jumbotron jumbotron-c-resize">
+    <h1>Video calls and text</h1>
+    <br>
+    {% if user.is_authenticated %}
+      <a href="{% url 'videotexthome' %}" class="btn btn-primary btn-large">Click here to start a meeting</a>
+    {% else %}
+      <a href="{% url 'signin' %}" class="btn btn-primary btn-large">Click here to sign in</a>
+    {% endif %}
+  </div>
+</center>
+{% endblock %}
